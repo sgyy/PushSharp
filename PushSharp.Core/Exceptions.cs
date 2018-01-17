@@ -3,17 +3,9 @@ using System.Collections.Generic;
 
 namespace PushSharp.Core
 {
-    public class DeviceSubscriptionExpiredException : DeviceSubscriptonExpiredException
+    public class DeviceSubscriptionExpiredException : NotificationException
     {
-        public DeviceSubscriptionExpiredException (INotification notification) : base (notification)
-        {
-        }
-    }
-
-    [Obsolete ("Do not use this class directly, it has a typo in it, instead use DeviceSubscriptionExpiredException")]
-    public class DeviceSubscriptonExpiredException : NotificationException
-    {
-        public DeviceSubscriptonExpiredException (INotification notification) : base ("Device Subscription has Expired", notification)
+        public DeviceSubscriptionExpiredException(INotification notification) : base("Device Subscription has Expired", notification)
         {
             ExpiredAt = DateTime.UtcNow;
         }
@@ -25,13 +17,13 @@ namespace PushSharp.Core
 
     public class NotificationException : Exception
     {
-        public NotificationException (string message, INotification notification) : base (message)
+        public NotificationException(string message, INotification notification) : base(message)
         {
             Notification = notification;
         }
 
-        public NotificationException (string message, INotification notification, Exception innerException)
-            : base (message, innerException)
+        public NotificationException(string message, INotification notification, Exception innerException)
+            : base(message, innerException)
         {
             Notification = notification;
         }
@@ -41,7 +33,7 @@ namespace PushSharp.Core
 
     public class RetryAfterException : NotificationException
     {
-        public RetryAfterException (INotification notification, string message, DateTime retryAfterUtc) : base (message, notification)
+        public RetryAfterException(INotification notification, string message, DateTime retryAfterUtc) : base(message, notification)
         {
             RetryAfterUtc = retryAfterUtc;
         }

@@ -56,16 +56,16 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\PushSharp.Apple\PushSharp.Apple.csproj">
-      <Project>{A9D99F80-FEEB-4E74-96C5-66F17103C773}</Project>
-      <Name>PushSharp.Apple</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PushSharp.Amazon\PushSharp.Amazon.csproj">
       <Project>{2468C63B-C964-4FC3-9B16-13DC17CF7D11}</Project>
       <Name>PushSharp.Amazon</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PushSharp.Apple\PushSharp.Apple.csproj">
+      <Project>{06f03f1d-d5ef-48ed-be8b-39e49a80561f}</Project>
+      <Name>PushSharp.Apple</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PushSharp.Google\PushSharp.Google.csproj">
-      <Project>{94F16497-471F-433F-A99E-C455FB2D7724}</Project>
+      <Project>{3b69ebcc-4e72-4023-a36c-e5c447abe2de}</Project>
       <Name>PushSharp.Google</Name>
     </ProjectReference>
     <ProjectReference Include="..\PushSharp.Windows\PushSharp.Windows.csproj">

@@ -95,7 +95,7 @@ namespace PushSharp.Apple
             if (!string.IsNullOrEmpty(notification.Topic))
                 headers.Add("apns-topic", notification.Topic); // string topic
 
-            var response = await http2.Post(uri, headers, data);
+            var response = await http2.PostAsync(uri, headers, data);
 
             if (response.Status == HttpStatusCode.OK)
             {

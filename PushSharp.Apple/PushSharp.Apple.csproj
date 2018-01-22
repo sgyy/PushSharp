@@ -5,10 +5,18 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\PushSharp.Apple.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\PushSharp.Apple.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="HttpTwo" Version="1.0.0" />
+    <PackageReference Include="HttpTwo" Version="1.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="PushSharp.Core" Version="4.1.0" />
+    <PackageReference Include="PushSharp.Core" Version="4.1.1" />
   </ItemGroup>
 
 </Project>

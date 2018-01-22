@@ -28,7 +28,6 @@ namespace PushSharp.Google
             result.DryRun = response.OriginalNotification.DryRun;
             result.Priority = response.OriginalNotification.Priority;
             result.To = response.OriginalNotification.To;
-            result.NotificationKey = response.OriginalNotification.NotificationKey;
 
             return result;
         }
@@ -48,7 +47,6 @@ namespace PushSharp.Google
             result.ContentAvailable = msg.ContentAvailable;
             result.DryRun = msg.DryRun;
             result.Priority = msg.Priority;
-            result.NotificationKey = msg.NotificationKey;
 
             return result;
         }
@@ -121,12 +119,6 @@ namespace PushSharp.Google
         /// </summary>
         [JsonProperty("dry_run")]
         public bool? DryRun { get; set; }
-
-        /// <summary>
-        /// A string that maps a single user to multiple registration IDs associated with that user. This allows a 3rd-party server to send a single message to multiple app instances (typically on multiple devices) owned by a single user.
-        /// </summary>
-        [Obsolete("Deprecated on GCM Server API.  Use Device Group Messaging to send to multiple devices.")]
-        public string NotificationKey { get; set; }
 
         /// <summary>
         /// A string containing the package name of your application. When set, messages will only be sent to registration IDs that match the package name

@@ -6,12 +6,20 @@
     <RepositoryUrl>https://github.com/sgyy/PushSharp.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</PackageLicenseUrl>
-    <Version>4.1.0</Version>
+    <Version>4.1.1</Version>
     <Company />
     <Authors>sgyy</Authors>
-    <PackageIconUrl>https://github.com/sgyy/PushSharp/apns-http2/Resources/PushSharp-Icon-NuGet.png</PackageIconUrl>
-    <PackageReleaseNotes>多平台支持</PackageReleaseNotes>
+    <PackageIconUrl>https://raw.githubusercontent.com/sgyy/PushSharp/apns-http2/Resources/PushSharp-Icon-NuGet.png</PackageIconUrl>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\PushSharp.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\PushSharp.Core.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

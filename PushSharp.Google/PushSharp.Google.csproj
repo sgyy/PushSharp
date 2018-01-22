@@ -2,11 +2,27 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net45;net46</TargetFrameworks>
+    <Authors>sgyy</Authors>
+    <Company>北京贝塔科技股份有限公司</Company>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/sgyy/PushSharp.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/sgyy/PushSharp</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/sgyy/PushSharp/apns-http2/Resources/PushSharp-Icon-NuGet.png</PackageIconUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\PushSharp.Google.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\PushSharp.Google.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="PushSharp.Core" Version="4.1.0" />
+    <PackageReference Include="PushSharp.Core" Version="4.1.1" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">

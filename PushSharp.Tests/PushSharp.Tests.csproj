@@ -34,6 +34,9 @@
     <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="PushSharp.Core, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushSharp.Core.4.1.0\lib\net45\PushSharp.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
@@ -53,10 +56,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\PushSharp.Core\PushSharp.Core.csproj">
-      <Project>{2B44A8DA-60BC-4577-A2D7-D9D53F164B2E}</Project>
-      <Name>PushSharp.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PushSharp.Apple\PushSharp.Apple.csproj">
       <Project>{A9D99F80-FEEB-4E74-96C5-66F17103C773}</Project>
       <Name>PushSharp.Apple</Name>
